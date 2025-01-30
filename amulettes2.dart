@@ -9,7 +9,7 @@ class Amulette{
 
 }
 class AmuletteFeu extends Amulette{
-  AmuletteFeu() : super("Flamme Etenelle" , "Obsidienne" ,50);
+  AmuletteFeu() : super("Flamme Eternelle" , "Obsidienne" ,50);
 }
 class AmuletteGlace extends Amulette{
   AmuletteGlace() : super("Coeur Gélé" , "Cristal de Glace" ,40);
@@ -31,4 +31,17 @@ AmuletteFeu(),
 AmuletteGlace(),
 AmuletteOmbre() ,
   ];
+  // recherche de l'amulette feu
+ 
+   String nomRechercher = "Flamme Eternelle";
+   print(nomRechercher);
+   Amulette? resultat=trouverAmulette(amulettes, nomRechercher);
+  for(var amulettes in amulettes){
+    print("${amulettes.nom} - ${amulettes.materiau}- ${amulettes.puissance}");
+  }
+  if(resultat !=null){
+    print(" le resulat Amulette trouvée :${resultat.nom}");
+  }else{
+    print(" l'Amulette n'est pas trouver" );
+  }
 }
